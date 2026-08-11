@@ -1,0 +1,457 @@
+/* =========================================================
+   APPLE MUSIC MACOS STYLE — SPOTIFY
+   ========================================================= */
+
+:root {
+    --apple-bg: #ffffff;
+    --apple-sidebar: rgba(248, 247, 252, 0.82);
+    --apple-panel: rgba(255, 255, 255, 0.82);
+    --apple-border: rgba(0, 0, 0, 0.08);
+    --apple-text: #1d1d1f;
+    --apple-subtext: #6e6e73;
+    --apple-accent: #ff2d55;
+}
+
+/* ---------- GLOBAL ---------- */
+
+html,
+body {
+    background: var(--apple-bg) !important;
+    color: var(--apple-text) !important;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Segoe UI",
+        sans-serif !important;
+}
+
+/* Remove Spotify's giant drag strip */
+.body-drag-top {
+    display: none !important;
+    height: 0 !important;
+}
+
+/* =========================================================
+   LEFT SIDEBAR
+   ========================================================= */
+
+#Desktop_LeftSidebar_Id,
+.Root__nav-bar {
+    background: var(--apple-sidebar) !important;
+
+    backdrop-filter: blur(28px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(160%) !important;
+
+    border-right: 1px solid var(--apple-border) !important;
+
+    border-radius: 0 20px 20px 0 !important;
+
+    box-shadow: none !important;
+}
+
+/* Remove giant card look from library */
+.Root__nav-bar * {
+    box-shadow: none !important;
+}
+
+/* Sidebar text */
+.Root__nav-bar span,
+.Root__nav-bar p {
+    color: var(--apple-text);
+}
+
+/* Sidebar selected item */
+.Root__nav-bar [aria-current="page"],
+.Root__nav-bar [aria-selected="true"] {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+/* =========================================================
+   MAIN CENTER AREA
+   ========================================================= */
+
+.Root__main-view {
+    background: #ffffff !important;
+
+    border-radius: 0 !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    margin: 0 !important;
+}
+
+/* Main scrolling area */
+.main-view-container {
+    background: #ffffff !important;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.main-globalNav-container,
+.main-topBar-container {
+    background: rgba(255, 255, 255, 0.88) !important;
+
+    backdrop-filter: blur(25px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(160%) !important;
+
+    border-bottom: 1px solid var(--apple-border) !important;
+
+    box-shadow: none !important;
+}
+
+/* Search */
+.main-globalNav-searchInputContainer,
+.main-globalNav-searchInputWrapper,
+.main-topBar-searchBar,
+.x-searchInput-searchInputSearchBar {
+    background: rgba(255, 255, 255, 0.95) !important;
+
+    border: 1px solid rgba(0, 0, 0, 0.10) !important;
+
+    border-radius: 10px !important;
+
+    box-shadow: none !important;
+}
+
+/* Search input */
+.main-globalNav-searchInputContainer input {
+    color: var(--apple-text) !important;
+}
+
+.main-globalNav-searchInputContainer input::placeholder {
+    color: var(--apple-subtext) !important;
+}
+
+/* Home + marketplace */
+button[aria-label="Home"],
+button[aria-label*="Marketplace" i],
+a[aria-label*="Marketplace" i] {
+    background: #ffffff !important;
+
+    color: var(--apple-text) !important;
+
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+    border-radius: 50% !important;
+
+    box-shadow: none !important;
+}
+
+/* =========================================================
+   CARDS / ALBUMS
+   ========================================================= */
+
+.main-card-card {
+    background: transparent !important;
+
+    border-radius: 0 !important;
+
+    padding: 0 !important;
+
+    box-shadow: none !important;
+}
+
+.main-card-card:hover {
+    background: transparent !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+}
+
+/* Album art */
+.main-card-imageContainer,
+.main-card-imageContainer img {
+    border-radius: 8px !important;
+
+    overflow: hidden !important;
+}
+
+/* =========================================================
+   TRACK ROWS
+   ========================================================= */
+
+.main-trackList-trackListRow {
+    border-radius: 8px !important;
+}
+
+.main-trackList-trackListRow:hover {
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* =========================================================
+   RIGHT PANEL
+   ========================================================= */
+
+#Desktop_PanelContainer_Id,
+.Root__right-sidebar {
+    background: rgba(250, 247, 244, 0.78) !important;
+
+    backdrop-filter: blur(30px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(160%) !important;
+
+    border-left: 1px solid var(--apple-border) !important;
+
+    border-radius: 20px 0 0 20px !important;
+
+    box-shadow: none !important;
+}
+
+/* Kill dark Spotify cards */
+#Desktop_PanelContainer_Id section,
+#Desktop_PanelContainer_Id [class*="card"],
+#Desktop_PanelContainer_Id [class*="Card"] {
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+/* Right text */
+#Desktop_PanelContainer_Id h1,
+#Desktop_PanelContainer_Id h2,
+#Desktop_PanelContainer_Id h3,
+#Desktop_PanelContainer_Id p,
+#Desktop_PanelContainer_Id span {
+    color: var(--apple-text);
+}
+
+/* =========================================================
+   BOTTOM PLAYER — APPLE MUSIC GLASS STRIP
+   ========================================================= */
+
+.Root__now-playing-bar {
+    width: 72% !important;
+
+    margin: 0 auto 10px auto !important;
+
+    min-height: 64px !important;
+
+    background: rgba(245, 245, 247, 0.78) !important;
+
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.55) !important;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.10) !important;
+
+    overflow: hidden !important;
+}
+
+/* Player artwork */
+.Root__now-playing-bar img {
+    border-radius: 7px !important;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    border-radius: 8px !important;
+}
+
+/* Apple pink/red accent */
+button[aria-checked="true"],
+button[aria-pressed="true"],
+[aria-current="page"] {
+    color: var(--apple-accent) !important;
+}
+
+/* =========================================================
+   MENUS
+   ========================================================= */
+
+.main-contextMenu-menu,
+[role="dialog"] {
+    background: rgba(255, 255, 255, 0.92) !important;
+
+    backdrop-filter: blur(28px) !important;
+    -webkit-backdrop-filter: blur(28px) !important;
+
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.14) !important;
+}
+
+/* =========================================================
+   SCROLLBARS
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18) !important;
+
+    border-radius: 999px !important;
+}/* =========================================================
+   COLOR / VISIBILITY REPAIR
+   ========================================================= */
+
+/* ---------- REMOVE RED LIBRARY TILE BACKGROUNDS ---------- */
+
+#Desktop_LeftSidebar_Id {
+    --background-base: #f7f7f9 !important;
+    --background-highlight: #ededf2 !important;
+    --background-press: #e5e5ea !important;
+    --background-elevated-base: #ffffff !important;
+    --background-elevated-highlight: #f5f5f7 !important;
+
+    --text-base: #1d1d1f !important;
+    --text-subdued: #6e6e73 !important;
+
+    --essential-base: #1d1d1f !important;
+    --essential-subdued: #8e8e93 !important;
+}
+
+/* Artist/library artwork should NOT inherit Spotify red */
+#Desktop_LeftSidebar_Id [class*="card"],
+#Desktop_LeftSidebar_Id [class*="Card"],
+#Desktop_LeftSidebar_Id [class*="item"],
+#Desktop_LeftSidebar_Id [class*="Item"] {
+    --background-base: transparent !important;
+    background-color: transparent !important;
+}
+
+
+/* ---------- RIGHT PANEL: ACTUAL LIGHT MODE ---------- */
+
+#Desktop_PanelContainer_Id,
+.Root__right-sidebar,
+#Desktop_PanelContainer_Id * {
+    --background-base: #ffffff !important;
+    --background-highlight: #f5f5f7 !important;
+    --background-press: #e8e8ed !important;
+
+    --background-elevated-base: #ffffff !important;
+    --background-elevated-highlight: #f5f5f7 !important;
+
+    --text-base: #1d1d1f !important;
+    --text-subdued: #6e6e73 !important;
+
+    --essential-base: #1d1d1f !important;
+    --essential-subdued: #6e6e73 !important;
+
+    color: #1d1d1f;
+}
+
+/* Kill remaining black panels */
+#Desktop_PanelContainer_Id section,
+#Desktop_PanelContainer_Id [class*="card"],
+#Desktop_PanelContainer_Id [class*="Card"] {
+    background: rgba(255,255,255,0.70) !important;
+    background-color: rgba(255,255,255,0.70) !important;
+
+    border: 1px solid rgba(0,0,0,0.06) !important;
+
+    color: #1d1d1f !important;
+}
+
+/* Force readable text */
+#Desktop_PanelContainer_Id h1,
+#Desktop_PanelContainer_Id h2,
+#Desktop_PanelContainer_Id h3,
+#Desktop_PanelContainer_Id h4,
+#Desktop_PanelContainer_Id p,
+#Desktop_PanelContainer_Id span,
+#Desktop_PanelContainer_Id a {
+    color: #1d1d1f !important;
+}
+
+/* Secondary labels */
+#Desktop_PanelContainer_Id [class*="subdued"] {
+    color: #6e6e73 !important;
+}
+
+
+/* ---------- PLAYER BUTTON VISIBILITY ---------- */
+
+.Root__now-playing-bar {
+    --text-base: #1d1d1f !important;
+    --text-subdued: #6e6e73 !important;
+
+    --essential-base: #1d1d1f !important;
+    --essential-subdued: #6e6e73 !important;
+
+    color: #1d1d1f !important;
+}
+
+/* Lyrics / queue / devices / volume icons */
+.Root__now-playing-bar button,
+.Root__now-playing-bar svg {
+    color: #1d1d1f !important;
+    fill: currentColor !important;
+}
+
+/* Spotify active state -> Apple Music pink */
+.Root__now-playing-bar button[aria-pressed="true"],
+.Root__now-playing-bar button[aria-checked="true"] {
+    color: #ff2d55 !important;
+}
+
+.Root__now-playing-bar button[aria-pressed="true"] svg,
+.Root__now-playing-bar button[aria-checked="true"] svg {
+    fill: #ff2d55 !important;
+}
+
+
+/* ---------- KEEP WHITE/GRAY BACKGROUND ---------- */
+
+.Root__main-view,
+.Root__nav-bar,
+.Root__right-sidebar {
+    --background-base: #ffffff !important;
+    --background-highlight: #f5f5f7 !important;
+}/* ===== RED + WHITE MAIN PLAY BUTTON ===== */
+
+/* Main play/pause button */
+button[data-testid="control-button-playpause"] {
+    background: #ff0000 !important;
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+
+    border-radius: 50% !important;
+    border: none !important;
+
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.22) !important;
+
+    transform: scale(1.08);
+}
+
+/* Force play/pause icon white */
+button[data-testid="control-button-playpause"] svg {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Slight hover effect */
+button[data-testid="control-button-playpause"]:hover {
+    background: #e60000 !important;
+    background-color: #e60000 !important;
+
+    transform: scale(1.13);
+}
+}
