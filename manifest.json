@@ -1,0 +1,19 @@
+{
+  "name": "Apple Music for Spotify",
+  "description": "A macOS Apple Music-inspired light theme for Spicetify.",
+  "preview": "preview.png",
+  "readme": "README.md",
+  "usercss": "user.css",
+  "schemes": "color.ini",
+  "authors": [
+    {
+      "name": "lukeisaac06"
+    }
+  ],
+  "tags": [
+    "light",
+    "macos",
+    "apple-music",
+    "minimal"
+  ]
+}
