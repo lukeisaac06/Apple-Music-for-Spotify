@@ -16,6 +16,11 @@ A Spicetify theme inspired by the look and feel of Apple Music on macOS.
 - Red and white play button
 - Rounded album artwork
 
+  ## Compatibility
+
+✅ MacOS
+✅ Windows
+
 ## Requirements
 
 - Spotify Desktop
@@ -32,7 +37,4 @@ spicetify config current_theme "Apple Music"
 spicetify config color_scheme AppleDark
 spicetify apply
 
-## Compatibility
 
-✅ MacOS
-✅ Windows
